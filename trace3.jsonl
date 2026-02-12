@@ -1,0 +1,7 @@
+{"step": 1, "event": "OP", "t": 1, "op": "BEGIN", "result": "OK"}
+{"step": 2, "event": "OP", "t": 2, "op": "BEGIN", "result": "OK"}
+{"step": 3, "event": "OP", "t": 1, "op": "R", "item": "A", "result": "OK", "value": 100}
+{"step": 4, "event": "OP", "t": 2, "op": "W", "item": "A", "value": 150, "result": "OK"}
+{"step": 5, "event": "OP", "t": 2, "op": "COMMIT", "result": "OK", "commit_ts": 3}
+{"step": 6, "event": "OP", "t": 1, "op": "R", "item": "A", "result": "OK", "value": 100}
+{"step": 7, "event": "OP", "t": 1, "op": "COMMIT", "result": "OK", "commit_ts": 4}

@@ -1,0 +1,11 @@
+{"step": 1, "event": "OP", "t": 1, "op": "BEGIN", "result": "OK"}
+{"step": 2, "event": "OP", "t": 2, "op": "BEGIN", "result": "OK"}
+{"step": 3, "event": "OP", "t": 1, "op": "W", "item": "A", "value": 101, "result": "OK"}
+{"step": 4, "event": "OP", "t": 2, "op": "W", "item": "B", "value": 201, "result": "OK"}
+{"step": 5, "event": "OP", "t": 1, "op": "W", "item": "B", "result": "BLOCKED", "why": "waiting for X(B)"}
+{"step": 6, "event": "OP", "t": 2, "op": "W", "item": "A", "result": "BLOCKED", "why": "waiting for X(A)"}
+{"step": 7, "event": "DEADLOCK", "cycle": [1, 2, 1], "victim": 2}
+{"step": 8, "event": "ABORT", "t": 2}
+{"step": 9, "event": "UNBLOCK", "t": 1, "item": "B", "lock_mode": "X"}
+{"step": 10, "event": "OP", "t": 1, "op": "W", "item": "B", "value": 102, "result": "OK"}
+{"step": 11, "event": "OP", "t": 1, "op": "COMMIT", "result": "OK"}
