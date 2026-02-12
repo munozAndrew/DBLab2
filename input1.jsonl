@@ -1,0 +1,7 @@
+{"t":1,"op":"BEGIN"}
+{"t":2,"op":"BEGIN"}
+{"t":1,"op":"R","item":"A"}
+{"t":1,"op":"W","item":"A","value":90}
+{"t":2,"op":"W","item":"A","value":80}
+{"t":1,"op":"COMMIT"}
+{"t":2,"op":"COMMIT"}
